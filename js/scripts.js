@@ -16,3 +16,16 @@ cep.addEventListener('blur', function(e) {
 });
 
 
+/* functions */
+function popularForm(resposta) {
+
+    if("erro" in resposta) {
+        alert('CEP não encontrado');
+        return;
+    }
+
+    rua.value = resposta.logradouro;
+    bairro.value = resposta.bairro;
+    cidade.value = resposta.localidade;
+    estado.value = resposta.uf;
+}
