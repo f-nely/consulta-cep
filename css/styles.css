@@ -1,0 +1,15 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* geral */
+body {
+    background-color: #e6fcf5;
+    font-size: 1rem;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    color: #fff;
+}
+
