@@ -23,3 +23,24 @@ btnCep.addEventListener('click', function(e) {
     document.body.appendChild(script);
 });
 
+/* functions */
+function popularNaoSeiMeuCep(resposta) {
+
+    if(!Array.isArray(resposta)) {
+        alert('O retorno não é uma lista de CEPs');
+        return;
+    }
+
+    resposta.forEach(function(i) {
+        let li = document.createElement('li');
+        let endereco = i.logradouro + ' | ' + i.bairro + ' | ' + i.localidade + ' | ' + i.uf + ' | ' + i.cep;
+        li.innerHTML = endereco;
+        li.setAttribute('onclick', 'exibirCep('+i.cep.replace('-', '')+')');
+        listaCep.appendChild(li);
+    });
+ 
+}
+
+function exibirCep(cep) {
+    alert(cep);
+}
