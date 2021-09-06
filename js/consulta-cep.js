@@ -10,3 +10,16 @@ rua.value = 'Domingos Jose';
 cidade.value = 'Porto Alegre';
 uf.value = 'RS';
 
+/* events */
+btnCep.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    let urlBase = 'https://viacep.com.br/ws/';
+    let parametros = uf.value + '/' + cidade.value + '/' + rua.value + '/json/';
+    let callback = '?callback=popularNaoSeiMeuCep';
+    
+    let script = document.createElement('script');
+    script.src = urlBase + parametros + callback;
+    document.body.appendChild(script);
+});
+
