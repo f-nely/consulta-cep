@@ -12,6 +12,27 @@
     <title>Não sei meu CEP</title>
 </head>
 <body>
-    
+    <div class="container">
+        <h2>Não sei meu CEP</h2>
+        <form>
+            <div class="frm-row">
+                <label for="rua">rua</label>
+                <input type="text" name="rua" id="rua">
+            </div>
+            <div class="frm-row">
+                <label for="cidade">cidade</label>
+                <input type="text" name="cidade" id="cidade">
+            </div>
+            <div class="frm-row">
+                <label for="estado">estado</label>
+                <input type="text" name="estado" id="estado">
+            </div>
+            <div class="frm-row">
+                <button id="btn-buscar-cep" class="btn">Buscar CEP</button>
+            </div>
+        </form>
+
+        <ul id="lista-cep"></ul>
+    </div>
 </body>
 </html>
